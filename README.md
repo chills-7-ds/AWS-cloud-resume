@@ -1,38 +1,50 @@
-# ☁️ AWS Serverless Cloud Resume
+# ☁️ AWS Serverless Cloud Portfolio
+A fully functional, event-driven portfolio website built on **Amazon Web Services (AWS)**. This project demonstrates a decoupled, serverless architecture designed for high availability and cost-efficiency.
 
-A fully functional, serverless portfolio website hosted on AWS. This project demonstrates my ability to design and implement a decoupled cloud architecture using industry best practices.
-
-## 🔗 [View Live Portfolio](http://chills-cloud-resume-2026.s3-website-us-east-1.amazonaws.com)
-
----
-
-## 🏗️ The Architecture
-The project follows a serverless "Event-Driven" pattern:
-- **Frontend**: **Amazon S3** (Static Hosting) + **CloudFront** (Global Delivery).
-- **API**: **Amazon API Gateway** acting as a secure bridge.
-- **Compute**: **AWS Lambda** (Python/Boto3) processing visitor logic.
-- **Database**: **Amazon DynamoDB** for persistent visitor tracking.
-- **Security**: **IAM Roles** with Least Privilege access.
+## 🔗 [Live Portfolio Link](http://chills-cloud-resume-2026.s3-website-us-east-1.amazonaws.com)
 
 ---
 
-## 📸 Project Journey
-
-### 1. The Design Phase
-I started with a simple HTML site. During the initial S3 hosting, I successfully resolved a **403 Forbidden Access** error by implementing a JSON Bucket Policy.
-![S3 Error Fix](./screenshots/error.png)
-
-### 2. The Backend Integration
-I built a RESTful API to communicate with my Python Lambda function. Below is the JSON response verifying that the database is updating correctly.
-![Backend Verification](./screenshots/backend.png)
-
-### 3. The Final Result
-The result is a professional, high-performance portfolio with a live visitor counter.
-![Final Site](./screenshots/final_site.png)
+## 🏗️ Architecture Overview
+The project follows a "Serverless" pattern, ensuring no servers are managed and scaling is handled automatically by AWS:
+- **Storage**: **Amazon S3** (Static Website Hosting).
+- **Compute**: **AWS Lambda** (Python/Boto3) to handle backend logic.
+- **Database**: **Amazon DynamoDB** (NoSQL) for visitor tracking.
+- **API Management**: **Amazon API Gateway** (REST API) as the secure bridge.
+- **Security**: **IAM** Least Privilege Policies and **CORS** configuration.
 
 ---
 
-## 🧠 Key Learnings
-- **CORS Management**: Handled Cross-Origin Resource Sharing (CORS) between different AWS domains.
-- **Python Boto3**: Used the AWS SDK for Python to interact with DynamoDB.
-- **Cloud Security**: Implemented IAM policies for secure service-to-service communication.
+## 🛠️ The Technical Journey
+
+### 1. Handling Access Control (S3)
+During the initial deployment, I successfully resolved a **403 Forbidden Access** error by implementing a custom JSON Bucket Policy to enable public read access.
+![S3 Permission Fix](./screenshots/01-s3-403-error.png)
+
+### 2. Database Initialization (DynamoDB)
+I configured a NoSQL table to maintain state for the visitor counter. This screenshot verifies the initial item creation and data persistence.
+![DynamoDB Verification](./screenshots/02-backend-dynamodb-verify.png)
+
+### 3. API Integration & JSON Parsing
+I built a RESTful API to trigger the Lambda function. This verifies the API returns a structured JSON response to the frontend.
+![API Gateway Response](./screenshots/03-api-json-response.png)
+
+### 4. Polished Frontend Design
+The final portfolio is a responsive design that clearly communicates my skills and architectural mindset as an Aspiring Cloud Solutions Architect.
+![Portfolio Main View](./screenshots/04-portfolio-main.png)
+
+### 5. Live Visitor Counter Success
+The "Grand Finale" — a real-time visitor counter that successfully bridges the S3 frontend to the DynamoDB backend.
+![Visitor Counter Final](./screenshots/05-visitor-counter-final.png)
+
+---
+
+## 🧠 Core Competencies Demonstrated
+- **Cloud Security**: Configuring IAM roles and overcoming CORS (Cross-Origin Resource Sharing) challenges.
+- **Backend Development**: Writing Python scripts with the **Boto3** library for AWS automation.
+- **System Design**: Building a decoupled architecture where the frontend and backend operate independently.
+
+---
+**Author:** A. Keerthana  
+**Role:** Aspiring Cloud Solutions Architect  
+**Connect with me:** [LinkedIn](https://www.linkedin.com) | [GitHub](https://github.com)
